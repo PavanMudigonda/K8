@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-labels43
+  labels:
+    appType: api
+    company: goog
+    typ: cr
+spec:
+  containers:
+  - image: chkrishna/springdemoapp:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    name: spring-demoapp3
+    ports:
+    - containerPort: 8080
+      hostPort: 9090
+      protocol: TCP
